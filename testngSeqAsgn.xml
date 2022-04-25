@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SequentialAssignment">
+   <test thread-count="5" name="Test1">
+    <classes>
+      <class name="week5.day1.CreateContact"/>
+      <class name="week5.day1.CreateLead"/>
+      <class name="week5.day1.MergeContacts"/>
+      <class name="week5.day1.DuplicateLead"/>
+      <class name="week5.day1.EditLead"/>
+    </classes>
+  </test> <!-- Test1 -->
+ 
+     <test thread-count="2" name="Test2" parallel="classes">
+    <classes>
+      <class name="week5.day1.CreateContact"/>
+      <class name="week5.day1.CreateLead"/>
+      <class name="week5.day1.MergeContacts"/>
+      <class name="week5.day1.DuplicateLead"/>
+      <class name="week5.day1.EditLead"/>
+    </classes>
+  </test> <!-- Test2 -->
+</suite> <!-- SequentialAssignment -->
